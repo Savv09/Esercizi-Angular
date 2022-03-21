@@ -1,0 +1,11 @@
+#order-list {
+    height: 80%;
+    margin-top: 13vh;
+    width: 44vw;
+    background-color: #e1d5e7;
+    border: 2px solid #cea7bc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8vh;
+}

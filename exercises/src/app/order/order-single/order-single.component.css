@@ -1,0 +1,10 @@
+#order-single {
+    width: 42vw;
+    height: 17vh;
+    background-color: #bac8d3;
+    border: 2px solid #536e83;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 6vh;
+}
