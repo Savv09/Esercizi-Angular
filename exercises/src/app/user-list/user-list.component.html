@@ -1,9 +1,1 @@
-<div id="container" class *ngFor="let user of users; let i = index " style="margin-top: 5vh;">
-    <div class="d-flex align-items-center justify-content-around">
-        <p>{{ i + 1 }}.</p>
-        <img src="{{ user.profilePhotoUrl }}" alt="User Image" height="auto" width="300px">
-        <p><b>{{ user.name }} {{ user.surname }}</b></p>
-        <p>{{ user.age }}</p>
-        <p>{{ user.address.city }}</p>
-    </div>
-</div>
+<app-user-single [users]="users" ></app-user-single>
