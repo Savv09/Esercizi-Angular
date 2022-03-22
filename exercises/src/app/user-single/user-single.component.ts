@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IUser } from '../models/user';
 
 @Component({
@@ -8,10 +8,15 @@ import { IUser } from '../models/user';
 })
 export class UserSingleComponent implements OnInit {
   @Input() users: IUser[] = [] 
-
+  @Output() selected = new EventEmitter<IUser>();
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  deleteUser(user: IUser) {
+    this.selected.emit(user)
+  }
 }
