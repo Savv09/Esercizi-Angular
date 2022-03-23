@@ -1,10 +1,16 @@
-<div id="container" class *ngFor="let user of users; let i = index " style="margin-top: 5vh;">
-    <div class="d-flex align-items-center justify-content-around">
-        <p>{{ i + 1 }}.</p>
-        <img src="{{ user.profilePhotoUrl }}" alt="User Image" height="auto" width="300px">
-        <p><b>{{ user.name }} {{ user.surname }}</b></p>
-        <p>{{ user.age }}</p>
-        <p>{{ user.address.city }}</p>
-        <button (click)="deleteUser(user)">Delete</button>
+<div *ngIf="users.length > 0; else noUsers">
+    <div id="container" class *ngFor="let user of users; let i = index " style="margin-top: 5vh;">
+        <div class="d-flex align-items-center justify-content-around">
+            <p>{{ i + 1 }}.</p>
+            <img src="{{ user.profilePhotoUrl }}" alt="User Image" height="auto" width="300px">
+            <p><b>{{ user.name }} {{ user.surname }}</b></p>
+            <p>{{ user.age }}</p>
+            <p>{{ user.address.city }}</p>
+            <button (click)="deleteUser(user)">Delete</button>
+        </div>
     </div>
 </div>
+
+<ng-template #noUsers>
+    <p><b>Non sono presenti Utenti</b></p>
+</ng-template>
