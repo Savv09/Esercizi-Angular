@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IUser } from '../models/user';
+import { IUser, Role, Gender } from '../models/user';
 
 @Component({
   selector: 'app-user-single',
@@ -8,6 +8,7 @@ import { IUser } from '../models/user';
 })
 export class UserSingleComponent implements OnInit {
   @Input() users: IUser[] = [] 
+  @Input() role = Role
   @Output() selected = new EventEmitter<IUser>();
   
   constructor() { }

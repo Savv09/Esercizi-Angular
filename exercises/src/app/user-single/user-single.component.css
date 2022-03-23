@@ -1,3 +1,25 @@
 #container {
     width: 70vw;
+    margin-bottom: 3vh;
+}
+
+#user {
+    margin-left: 3vh;
+    padding: 1vh 0;
+}
+
+.staff-border {
+    border: solid 3px #46486f;
+}
+
+.manager-border {
+    border: solid 3px #adb1ce;
+}
+
+.admin-border {
+    border: solid 3px #cdcfd3;
+}
+
+.student-border {
+    border: solid 3px #cedbf7;
 }
