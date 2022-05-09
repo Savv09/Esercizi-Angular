@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CounterService } from '../services/counter.service';
 
 @Component({
@@ -8,12 +8,15 @@ import { CounterService } from '../services/counter.service';
 })
 export class EditCounterComponent implements OnInit {
   @Input() counter: number = 0;
+  @Output() value: EventEmitter<number> = new EventEmitter<number>();
 
   constructor(private counterServices: CounterService) { }
 
   ngOnInit(): void {
   }
 
-  
+  useValue(value: number) {
+    this.value.emit(value)
+  }
 
 }
