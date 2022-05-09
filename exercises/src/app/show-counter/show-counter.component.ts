@@ -15,4 +15,7 @@ export class ShowCounterComponent implements OnInit {
     this.counter = this.counterServices.getCounter()
   }
 
+  addValue(value: number) {
+    return  this.counterServices.increaseCounter(value)
+  }
 }

@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { CounterService } from '../services/counter.service';
 
 @Component({
@@ -7,16 +8,18 @@ import { CounterService } from '../services/counter.service';
   styleUrls: ['./edit-counter.component.css']
 })
 export class EditCounterComponent implements OnInit {
-  @Input() counter: number = 0;
   @Output() value: EventEmitter<number> = new EventEmitter<number>();
-
+  
+  public amount = new FormControl('');
+  
   constructor(private counterServices: CounterService) { }
-
+   
+  
   ngOnInit(): void {
   }
 
-  useValue(value: number) {
-    this.value.emit(value)
+  addValue(amount: number) {
+    this.value.emit(amount)
   }
 
 }
