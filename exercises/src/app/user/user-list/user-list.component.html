@@ -1,5 +1,9 @@
-<div id="user-list">
-    <app-user-single></app-user-single>
-    <app-user-single></app-user-single>
-    <app-user-single></app-user-single>
+<div id="user-list" class="d-flex flex-column align-items-center">
+    <h3 class="mt-4">Users List</h3>
+
+    <div class="mt-4">
+        <app-user-single [isVisible]="isVisible"></app-user-single>
+        <app-user-single [isVisible]="isVisible"></app-user-single>
+        <app-user-single [isVisible]="isVisible"></app-user-single>
+    </div>
 </div>

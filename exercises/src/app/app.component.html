@@ -1,4 +1,12 @@
-<div class="d-flex align-item-center justify-content-around">
-  <app-user-container></app-user-container>
-  <app-order-container></app-order-container>
+<div class="d-flex flex-column align-items-center">
+  <h1 class="mt-1">App Container</h1>
+  
+  <div id="navbar-container" class="d-flex alignitems-center justify-content-center mt-3">
+    <app-navbar></app-navbar>
+  </div>
+  
+  <div id="router-container" class="d-flex align-items-center justify-content-center mt-3">
+    <router-outlet></router-outlet>
+  </div>
+  
 </div>

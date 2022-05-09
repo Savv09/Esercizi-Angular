@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-container.component.css']
 })
 export class UserContainerComponent implements OnInit {
+  public isVisible: boolean = false;
 
   constructor() { }
 

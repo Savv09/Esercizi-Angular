@@ -1,8 +1,7 @@
 #order-container {
     height: 85vh;
-    width: 48vw;
+    width: 95vw;
     background-color: #f8cecc;
-    margin-top: 10vh;
+
     border: 2px solid #d49e9c;
-    margin-right: 1vw;
 }
