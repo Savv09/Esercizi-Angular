@@ -1,10 +1,6 @@
 #order-list {
-    height: 80%;
-    width: 44vw;
+    height: 70vh;
+    width: 90vw;
     background-color: #e1d5e7;
     border: 2px solid #cea7bc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 8vh;
 }

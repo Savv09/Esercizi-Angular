@@ -12,6 +12,7 @@ import { OrderSingleComponent } from './order/order-single/order-single.componen
 import { OrderDetailComponent } from './order/order-detail/order-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     OrderListComponent,
     OrderSingleComponent,
     OrderDetailComponent,
-    NavbarComponent
+    NavbarComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule
