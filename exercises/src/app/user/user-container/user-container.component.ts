@@ -13,4 +13,7 @@ export class UserContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showDetails() {
+    this.isVisible = !this.isVisible
+  }
 }

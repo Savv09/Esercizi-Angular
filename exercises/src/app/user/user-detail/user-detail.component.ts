@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-detail',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
-
+  @Input() isVisible: boolean = true;
+  @Output() hide: EventEmitter<boolean> = new EventEmitter<boolean>();
+ 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

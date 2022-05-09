@@ -2,10 +2,10 @@
     <h2 class="mt-4">Users Container</h2>
 
     <div class="d-flex mt-5 justify-content-center align-items-center">
-        <app-user-list [isVisible]="isVisible"></app-user-list>
+        <app-user-list [isVisible]="isVisible" (show)="showDetails()"></app-user-list>
         
-        <div *ngIf="!isVisible">
-            <app-user-detail></app-user-detail>
+        <div *ngIf="isVisible">
+            <app-user-detail (hide)="showDetails()"></app-user-detail>
         </div>
     </div>
 </div>

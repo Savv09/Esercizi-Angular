@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-single',
@@ -7,13 +7,10 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 })
 export class UserSingleComponent implements OnInit {
   @Input() isVisible: boolean = false;
+  @Output() show: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  showDetails() {
-    this.isVisible = !this.isVisible
   }
 }
