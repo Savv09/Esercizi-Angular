@@ -9,6 +9,7 @@ import { CounterService } from '../services/counter.service';
 })
 export class EditCounterComponent implements OnInit {
   @Output() value: EventEmitter<number> = new EventEmitter<number>();
+  @Output() otherValue: EventEmitter<number> = new EventEmitter<number>();
   
   public amount = new FormControl('');
   
@@ -20,6 +21,10 @@ export class EditCounterComponent implements OnInit {
 
   addValue(amount: number) {
     this.value.emit(amount)
+  }
+
+  subValue(amount: number){
+    this.otherValue.emit(amount)
   }
 
 }

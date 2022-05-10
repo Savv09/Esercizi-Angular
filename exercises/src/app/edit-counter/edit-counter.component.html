@@ -1,3 +1,5 @@
 <input  type="number" [formControl]="amount">
-<button (click)="addValue(amount.value)" >Aggiungi {{ amount.value }}</button>
-<button>Sottrai {{ amount.value }}</button>
+<div>  
+    <button (click)="addValue(amount.value)" >Aggiungi {{ amount.value }}</button>
+    <button (click)="subValue(amount.value)">Sottrai {{ amount.value }}</button>
+</div>

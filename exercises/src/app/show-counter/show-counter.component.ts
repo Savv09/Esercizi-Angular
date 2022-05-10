@@ -7,15 +7,17 @@ import { CounterService } from '../services/counter.service';
   styleUrls: ['./show-counter.component.css']
 })
 export class ShowCounterComponent implements OnInit {
-  public counter: number = 0;
 
-  constructor(private counterServices: CounterService) { }
+  constructor(public counterServices: CounterService) { }
 
   ngOnInit(): void {
-    this.counter = this.counterServices.getCounter()
   }
 
   addValue(value: number) {
     return  this.counterServices.increaseCounter(value)
+  }
+
+  subValue(value: number) {
+    return this.counterServices.decreaseCounter(value)
   }
 }
