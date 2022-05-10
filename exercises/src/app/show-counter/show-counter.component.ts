@@ -8,7 +8,6 @@ import { CounterService } from '../services/counter.service';
   styleUrls: ['./show-counter.component.css']
 })
 export class ShowCounterComponent implements OnInit {
-  counter$ = new Observable<number>();
 
   constructor(public counterServices: CounterService) { }
 
@@ -20,8 +19,8 @@ export class ShowCounterComponent implements OnInit {
     return  this.counterServices.increaseCounter(value)
   }
 
-  subValue(value: number) {
-    return this.counterServices.decreaseCounter(value)
+ subValue(value: number) {
+   return this.counterServices.decreaseCounter(value)
   }
 
 

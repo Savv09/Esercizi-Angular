@@ -13,7 +13,7 @@ export class EditCounterComponent implements OnInit {
   
   public amount = new FormControl('');
   
-  constructor(private counterServices: CounterService) { }
+  constructor(private counterService: CounterService) { }
    
   
   ngOnInit(): void {
