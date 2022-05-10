@@ -7,24 +7,35 @@ export class CounterService {
   private counter: number = 0;
 
   public getCounter() {
-    return this.counter
+
+    if(this.counter < 0) {
+     return console.warn('This counter cannot be negative')
+    } else {
+      return this.counter
+    }
   }
 
   public increaseCounter(value: number) {
-    value = 1;
+    let defaultValue = 1
 
-    this.counter += value;
+    if (!value) {
+      this.counter += defaultValue
+    } else {
+      this.counter += value;
+    }
     console.log(this.counter)
   }
 
   public decreaseCounter(value: number) {
-    value = 1;
+    let deafultValue = 1;
 
-    this.counter -= value;
-    
-    if(this.counter < 0) {
+    if(!value) {
+      this.counter -= deafultValue
+      console.log(this.counter)
+    } else if (this.counter < 0){
       console.error('Error: Negative Value!')
     } else {
+      this.counter -= value
       console.log(this.counter)
     }
   }
