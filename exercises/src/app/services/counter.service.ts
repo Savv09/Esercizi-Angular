@@ -38,13 +38,6 @@ export class CounterService {
       this.counter -= value
       console.log(this.counter)
     }
-   
-    
-    if(this.counter < 0) {
-
-    } else {
-      
-    }
   }
 
   constructor() { }
